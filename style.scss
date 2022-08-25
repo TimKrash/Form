@@ -12,7 +12,6 @@ $header-background: #F8F8F8;
     border-radius: 3px;
     padding: 7px;
     font-size: 12px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6;
 }
 @mixin error {
     @include input-placeholder;
@@ -39,15 +38,14 @@ $header-background: #F8F8F8;
 body {
 	height: 100vh;
 	width: 100vw;
-	position: relative;
 
 	.sidebar {
 		position: absolute;
 		background: url("https://picsum.photos/600");
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100%;
 		width: 30%;
+        height: 100%;
 
 		.hero-content {
 			display: flex;
@@ -80,12 +78,12 @@ body {
         display: flex;
         flex-direction: column;
 		width: 70%;
-        height: 100%;
 
 		.header {
 			font-family: $ff-poppins;
             background-color: $header-background;
             border-bottom: 1px solid #D6D9DC;
+            min-height: 35vh;
 
             .text:nth-child(1) {
                 margin-top: 8rem;            
@@ -106,20 +104,28 @@ body {
         h1 {
             padding-top: 2rem;
             padding-left: 2rem;
+            padding-bottom: 2rem;
         }
 
         form {
             font-family: $ff-poppins;
-            padding: 2rem;
             display: flex;
             flex-flow: row wrap;
+            min-height: 30vh;
 
              .form-item {
                 @include form-item;
+                padding-left: 2rem;
                 input {
                     @include input-placeholder;
+                    margin-bottom: 1rem;
                     min-width: 240px;
                     width: 20vw;
+                }
+
+                input:focus {
+                    outline: 1px solid blue;
+                    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
                 }
                 min-width: 300px;
                 width: 25vw;
@@ -128,11 +134,39 @@ body {
             .form-item:nth-child(2n+1) {
                 padding-right: 4rem;
             }
-        }
 
-        .footer {
-            font-family: $ff-poppins;
-            background-color: green;
+            .submit {
+                width: 100vw;
+                background-color: $header-background;
+                min-height: 30vh;
+                
+                .submit-text {
+                    padding-left: 2rem;
+                    padding-top: 1.5rem;
+
+                    a {
+                        text-decoration: none;
+                        color: #596D48;
+                    }
+
+                    a:visited {
+                        text-decoration: none;
+                        color: #596D48;
+                    }
+                }
+
+                button {
+                    all: unset;
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                    cursor: pointer;
+                    background-color: #596D48;
+                    color: white;
+                    padding: 12px 30px;
+                    margin-left: 2rem;
+                    margin-top: 2.8rem;
+                    border-radius: 5px;
+                }
+            }
         }
 	}
 
