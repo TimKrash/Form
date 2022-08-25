@@ -117,6 +117,19 @@ body .main-content form .form-item input:focus {
   outline: 1px solid blue;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+body .main-content form .form-item .-error:focus {
+  outline: 1px solid red;
+  border: 1px solid red;
+}
+body .main-content form .form-item input[id=password] {
+  margin-bottom: 0;
+}
+body .main-content form .form-item p.error {
+  font-size: 11px;
+  padding-top: 0.2rem;
+  font-style: italic;
+  color: red;
+}
 body .main-content form .form-item:nth-child(2n+1) {
   padding-right: 4rem;
 }

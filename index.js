@@ -6,10 +6,17 @@ const setPassword = (e) => {
 }
 
 const checkPassword = (e) => {
-    console.log('hello');
+    let actualPass = document.getElementById('password');
+    let pError = document.querySelector('p.error');
+
     if (e.target.value !== currPassword) {
-        console.log('hi');
         e.target.classList.add("-error");
+        actualPass.classList.add("-error");
+        pError.textContent = "* Passwords don't match!";
+    } else {
+        e.target.classList.remove("-error");
+        actualPass.classList.remove("-error");
+        pError.textContent = "";
     }
 }
 
