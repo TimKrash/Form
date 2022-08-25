@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("media/Norse-Bold.eot?") format("eot"), url("media/Norse-Bold.woff") format("woff"), url("media/Norse-Bold.ttf") format("truetype"), url("media/Norse-Bold.svg#Norse-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("media/Poppins-Bold.otf") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+body .sidebar {
+  position: absolute;
+  background: url("https://picsum.photos/600");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 30%;
+}
+body .sidebar .hero-content {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 0.3);
+}
+body .sidebar .hero-content span {
+  font-family: "Norse-Bold";
+  font-weight: 800;
+  font-size: 100px;
+  color: white;
+  height: 80px;
+}
+body .sidebar .hero-content img {
+  width: 100px;
+  height: auto;
+}
+body .main-content {
+  position: absolute;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+}
+body .main-content .header {
+  font-family: "Poppins";
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #D6D9DC;
+}
+body .main-content .header .text:nth-child(1) {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+}
+body .main-content .header .text:nth-child(2) {
+  margin-bottom: 2.8rem;
+}
+body .main-content .header .text {
+  font-size: 20px;
+  padding-left: 2rem;
+  padding-right: 7rem;
+}
+body .main-content h1 {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+body .main-content form {
+  font-family: "Poppins";
+  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+body .main-content form .form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  min-width: 300px;
+  width: 25vw;
+}
+body .main-content form .form-item label {
+  font-size: 12px;
+  color: gray;
+}
+body .main-content form .form-item input {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  padding: 7px;
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6;
+  min-width: 240px;
+  width: 20vw;
+}
+body .main-content form .form-item:nth-child(2n+1) {
+  padding-right: 4rem;
+}
+body .main-content .footer {
+  font-family: "Poppins";
+  background-color: green;
+}
+
+/*# sourceMappingURL=style.css.map */
